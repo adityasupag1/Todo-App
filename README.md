@@ -1,6 +1,7 @@
 # Todo App 🚀
 
-![Todo App Screenshot](/screenshots/app-preview.png)  
+![Todo App Screenshot](/screenshots/preview1.png) 
+![Todo App Screenshot](/screenshots/preview2.png)  
 *A clean, functional todo application with due dates and local storage*
 
 ## Features ✨
