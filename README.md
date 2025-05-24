@@ -84,19 +84,3 @@ Pull requests are welcome! For major changes, please open an issue first.
 **Enjoy staying organized!** ✨
 ```
 
-### Recommended additions:
-1. Create a `/screenshots` folder and add an `app-preview.png` image
-2. Add a `.gitignore` file with:
-   ```
-   .DS_Store
-   node_modules/
-   ```
-
-This README:
-- Highlights your app's best features
-- Shows technical depth
-- Provides clear usage instructions
-- Invites collaboration
-- Maintains a professional yet friendly tone
-
-Would you like me to modify any section or add specific details about your development process? 😊
