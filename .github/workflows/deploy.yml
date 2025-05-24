@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: echo "Auto-deployed" > todo.html  # Replace with your build commands
+      - run: echo "Auto-deployed" > index.html  # Replace with your build commands
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
