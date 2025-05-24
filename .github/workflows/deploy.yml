@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy Todo App
 on:
   push:
     branches: [main]
@@ -7,7 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: echo "Auto-deployed" > index.html  # Replace with your build commands
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
