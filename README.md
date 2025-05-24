@@ -29,10 +29,10 @@ cd todo-app
 open index.html
 
 ```
----
-How to Use 📝
---
-Add a todo:
+
+## How to Use 📝
+
+- **Add a todo:**
 
 Type your task in the input field
 
@@ -40,7 +40,7 @@ Select a due date (or leave blank for today)
 
 Click "Add"
 
-Edit a todo:
+- **Edit a todo:**
 
 Click the blue "Edit" button
 
@@ -48,7 +48,7 @@ Modify the text or date
 
 Click "Save"
 
-Delete a todo:
+- **Delete a todo:**
 
 Click the red "Delete" button
 
