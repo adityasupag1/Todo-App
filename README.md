@@ -1,87 +1,77 @@
-# Todo App 🚀
+# Todo App
 
-![Todo App Screenshot](/screenshots/preview1.png) 
-![Todo App Screenshot](/screenshots/preview2.png)  
-*A clean, functional todo application with due dates and local storage*
+A lightweight browser-based todo application built with HTML, CSS, and vanilla JavaScript. Tasks are stored in browser local storage, so the list persists across page reloads.
 
-## Features ✨
+![Todo App Screenshot](/screenshots/preview1.png)
+![Todo App Screenshot](/screenshots/preview2.png)
 
-- ✅ **Add, edit, and delete** todos
-- 📅 **Due date tracking** with automatic formatting (e.g., "25 May 2023")
-- 🔍 **Duplicate prevention** - won't allow identical todos
-- 💾 **Local storage** - todos persist after closing browser
-- 🎨 **Responsive design** with clean UI
-- ✏️ **Inline editing** - click edit to modify existing todos
+## Features
 
-## Technologies Used 🛠️
+- Add, edit, and delete todo items
+- Assign a due date to each task
+- Prevent duplicate task-and-date combinations
+- Persist tasks with the browser LocalStorage API
+- Format due dates for display
+- Responsive browser UI
+- Inline edit/cancel workflow
 
-- **Frontend**: HTML5, CSS3, JavaScript (ES6)
-- **Storage**: Browser LocalStorage API
-- **Date Handling**: JavaScript Date API
+## Tech
 
-## Installation 💻
+- HTML5
+- CSS3
+- JavaScript
+- Browser LocalStorage API
 
-No installation needed! Just open `index.html` in any modern browser.
+## Run locally
+
+No build step or package installation is required.
 
 ```bash
-# Or clone and run locally:
-git clone https://github.com/your-username/todo-app.git
-cd todo-app
-open index.html
-
+git clone https://github.com/adityasupag1/Todo-App.git
+cd Todo-App
 ```
 
+Then open `index.html` in a browser.
 
+## Project structure
 
-## How to Use 📝
-
-1. **Add a todo**:
-   - Type your task in the input field
-   - Select a due date (or leave blank for today)
-   - Click "Add"
-
-2. **Edit a todo**:
-   - Click the blue "Edit" button
-   - Modify the text or date
-   - Click "Save"
-
-3. **Delete a todo**:
-   - Click the red "Delete" button
-   - Confirm deletion
-
-## Code Structure 📂
-
-```
-todo-app/
-├── index.html      # Main HTML structure
-├── todo.css        # Styling
-└── todo.js         # Core functionality
+```text
+Todo-App/
+├── index.html
+├── todo.css
+├── todo.js
+└── screenshots/
 ```
 
-## Key Functions 🔑
+## Main JavaScript flow
 
-- `AddItems()` - Handles adding/updating todos
-- `displayTodoItems()` - Renders todos to the DOM
-- `startEditing()` - Enables todo modification
-- `deleteTodo()` - Removes todos with confirmation
+`AddItems()` validates the form, prevents duplicates, writes new or edited tasks to local storage, and refreshes the rendered list.
 
-## Future Improvements 🔮
+`displayTodoItems()` rebuilds the visible task list from the in-memory data.
 
-- [ ] Add priority levels (High/Medium/Low)
-- [ ] Implement task categories/tags
-- [ ] Add dark mode toggle
-- [ ] Enable drag-and-drop reordering
+`startEditing()` loads an existing task back into the form and switches the Add button to Save.
 
-## Contributing 🤝
+`deleteTodo()` removes a confirmed task and persists the updated list.
 
-Pull requests are welcome! For major changes, please open an issue first.
+`formatDate()` formats stored dates for display.
 
-## License 📜
+## Storage format
 
-[MIT](https://choosealicense.com/licenses/mit/)
+Tasks are stored under the `todo-items` LocalStorage key as JSON:
 
----
-
-**Enjoy staying organized!** ✨
+```json
+[
+  {
+    "item": "Example task",
+    "dueDate": "2026-09-19"
+  }
+]
 ```
 
+## Possible next improvements
+
+- Priority levels
+- Categories or tags
+- Drag-and-drop ordering
+- Dark mode
+- Automated browser tests
